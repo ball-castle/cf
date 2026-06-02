@@ -4,6 +4,7 @@ using ll = long long;
 /*
 https://codeforces.com/contest/2050/problem/F
 ST表
+倍增是一个比较需要理解的想法
 */
 
 ll gcd(ll x, ll y) {
