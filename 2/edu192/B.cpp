@@ -12,14 +12,17 @@ using ll = long long;
 
 ll a[200010];
 ll pre1[200010], pre3[200010];
-
+ll mx[200010];
 
 void solve() {
     ll n;
     cin >> n;
 
-    for(ll i = 1; i <= n; i++) cin >> a[i];
+    for(ll i = 1; i <= n; i++) cin >> a[i], mx[i] = -4e18;
 
+    for(ll i = 1; i <= n; i++) {
+        pre1[i] = 0, pre3[i] = 0;
+    }
     for(ll i = 1; i <= n; i++) {
         if(a[i] == 1) {
             pre1[i] = pre1[i - 1] + 1;
@@ -28,19 +31,26 @@ void solve() {
 
         else if(a[i] == 2) {
             pre1[i] = pre1[i - 1] - 1;
-            pre3[i] = pre3[i - 1] - 1;
+            pre3[i] = pre3[i - 1] + 1;
         }
         
         else {
             pre1[i] = pre1[i - 1] - 1;
-            pre3[i] = pre3[i - 1] + 1;
+            pre3[i] = pre3[i - 1] - 1;
         }
     }
 
-    // pre1[i] >= 0 pre3[y] - pre3[i] <= 0  
-    for(ll i = 1; i <= n; i++) {
-        
+    for(ll i = n - 1; i >= 1; i--) {
+        mx[i] = max(mx[i + 1], pre3[i]);
     }
+    // pre1[i] >= 0 pre3[y] - pre3[i] <= 0   pre[y] >= pre3[i] 用后缀最大值可以降维
+    for(ll i = 1; i <= n - 2; i++) {
+        if(pre1[i] >= 0 && mx[i + 1] >= pre3[i]) {
+            cout << "YES" << '\n';
+            return;
+        } 
+    }
+    cout << "NO" << '\n';
 }
 
 
