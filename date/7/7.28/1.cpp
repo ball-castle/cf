@@ -2,6 +2,10 @@
 using namespace std;
 using ll = long long;
 
+/*
+路径的本质其实是点的排列
+
+*/
 
 void solve() {
     ll n;
