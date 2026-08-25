@@ -62,8 +62,8 @@ void solve() {
         ll best = -4e18;
 
         for(ll j = 0; j < (ll)cur.size(); j++) {
-            while(p < (ll)pre.size() && pre[p] < cur[j]) {
-                best = max(best, dp[p]);
+            while(p < (ll)pre.size() && pre[p] < cur[j]) {    // 经典双指针 对于某一个现在的阶段往回找的时候不用每一个对于所有遍历
+                best = max(best, dp[p]);                      // 实际上对于某一个只需要找到到比自己小的最大的前面的前缀最大就行
                 p++;
             }
             if(best != -4e18) {
