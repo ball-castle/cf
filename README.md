@@ -1,5 +1,16 @@
 # CF 与 ICPC 训练记录
 
+## 最新个人比赛手册（ROUND02）
+
+原版 `read()` 直接保留；旧代码优先直接收录，包含树存储与 STL 基础。个人模板仍在同一个 `template/` 子模块中。
+
+- [25页赛前补丁 PDF](https://github.com/ball-castle/template/blob/76ae1760c8106d23bab8face9b64c5802b687651/板子打印版/成都站_赛前小技巧与题型补丁_2026.pdf) · [Word](https://github.com/ball-castle/template/blob/76ae1760c8106d23bab8face9b64c5802b687651/板子打印版/成都站_赛前小技巧与题型补丁_2026.docx)
+- [280页完整V2 PDF](https://github.com/ball-castle/template/blob/76ae1760c8106d23bab8face9b64c5802b687651/板子打印版/ACM_ICPC_铜牌稳妥覆盖_算法与模型_V2.pdf) · [Word](https://github.com/ball-castle/template/blob/76ae1760c8106d23bab8face9b64c5802b687651/板子打印版/ACM_ICPC_铜牌稳妥覆盖_算法与模型_V2.docx)
+- [题型导航](https://github.com/ball-castle/template/blob/76ae1760c8106d23bab8face9b64c5802b687651/HOW_TO_THINK.md) · [90项STL验收](https://github.com/ball-castle/template/blob/76ae1760c8106d23bab8face9b64c5802b687651/STL_AND_DATA_STRUCTURE_COVERAGE.md) · [逐模块来源](https://github.com/ball-castle/template/blob/76ae1760c8106d23bab8face9b64c5802b687651/SOURCE_PROVENANCE.md)
+- [本轮代码/打印验证](https://github.com/ball-castle/template/blob/76ae1760c8106d23bab8face9b64c5802b687651/VALIDATION_REPORT_V2.md) · [两仓库交付记录](DELIVERY_ROUND02.md)
+
+下方保留第一轮入口和训练历史；当前资料优先使用上面的个人版。
+
 本仓库保留训练过程中的源码。**有文件不等于已经 AC**；未完成代码、尝试和历史构建产物都可能存在。
 
 ## 模板与打印资料
