@@ -1,0 +1,164 @@
+{
+  "cf_checked_commit": "544485685fe5524a0847a97e91ac8d0f3909a03e",
+  "template_commit": "76ae1760c8106d23bab8face9b64c5802b687651",
+  "gitlink": "160000 commit 76ae1760c8106d23bab8face9b64c5802b687651\ttemplate",
+  "url": "https://github.com/ball-castle/template.git",
+  "template_github_actions": {
+    "run_id": 40115687058,
+    "url": "https://github.com/ball-castle/template/actions/runs/40115687058",
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "name": "test (release)",
+        "conclusion": "success"
+      },
+      {
+        "name": "test (sanitizers)",
+        "conclusion": "success"
+      }
+    ]
+  },
+  "clone": "git -c http.version=HTTP/1.1 clone --branch codex/icpc-chengdu-submodule-20261024 --recurse-submodules https://github.com/ball-castle/cf.git build/fresh-clone-round02-20261025",
+  "verified_modules": 100,
+  "verified_test_suites": 16,
+  "old_preserved": {
+    "formal_sources": 32,
+    "legacy_sources": 32,
+    "print_artifacts": 4
+  },
+  "training_tracked": {
+    "cpp": 215,
+    "exe": 151,
+    "changed": false
+  },
+  "checks": [
+    {
+      "command": [
+        "C:\\Users\\TSOU\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "scripts/check_print.py"
+      ],
+      "exit_code": 0,
+      "output": "{\n  \"book\": \"ACM_ICPC_铜牌算法板子_完整版\",\n  \"pages\": 41,\n  \"source_lines\": 1271,\n  \"docx_sha256\": \"e45d0617d36839f34344bb037957bedc2404d3ae8dd02d5ba1e3d2b2dcf272f4\",\n  \"pdf_sha256\": \"87279374a44f95aa1deb8a2ea99b1e045565fc5061db1bc9e94f995c257af4cb\",\n  \"errors\": [],\n  \"structural_check\": \"PASS\",\n  \"visual_check\": \"Required separately on all rendered pages\"\n}\n{\n  \"book\": \"成都站_铜牌冲刺板子_2026\",\n  \"pages\": 24,\n  \"source_lines\": 658,\n  \"docx_sha256\": \"18b7cef0dc23841f13c243a3ecfd2473a452979bd51d7cd490499dd0b810108c\",\n  \"pdf_sha256\": \"78132eec669e1830bd18f67930ec68a80d0101788037bd16158348112e72ffce\",\n  \"errors\": [],\n  \"structural_check\": \"PASS\",\n  \"visual_check\": \"Required separately on all rendered pages\"\n}\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\TSOU\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "scripts/check_round02_print.py"
+      ],
+      "exit_code": 0,
+      "output": "ACM_ICPC_铜牌稳妥覆盖_算法与模型_V2 280 PASS []\n成都站_赛前小技巧与题型补丁_2026 25 PASS []\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\TSOU\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "scripts/test_round02_print_gate.py"
+      ],
+      "exit_code": 0,
+      "output": "PASS: current artifact and four deliberately broken bindings are distinguished\n"
+    },
+    {
+      "command": [
+        "g++",
+        "-std=gnu++20",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Wshadow",
+        "tests/round02/test_runtime.cpp",
+        "-o",
+        "C:\\Users\\TSOU\\Desktop\\cf\\build\\fresh-clone-round02-20261025\\template\\build\\fresh_smoke\\test_runtime.exe"
+      ],
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\TSOU\\Desktop\\cf\\build\\fresh-clone-round02-20261025\\template\\build\\fresh_smoke\\test_runtime.exe"
+      ],
+      "exit_code": 0,
+      "output": "runtime: legal read 50007 + IO + FP/search 2000 PASS\n"
+    },
+    {
+      "command": [
+        "g++",
+        "-std=gnu++20",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Wshadow",
+        "tests/round02/test_stl.cpp",
+        "-o",
+        "C:\\Users\\TSOU\\Desktop\\cf\\build\\fresh-clone-round02-20261025\\template\\build\\fresh_smoke\\test_stl.exe"
+      ],
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\TSOU\\Desktop\\cf\\build\\fresh-clone-round02-20261025\\template\\build\\fresh_smoke\\test_stl.exe"
+      ],
+      "exit_code": 0,
+      "output": "STL: all recipes + Huffman exhaustive + heap/set differential PASS\n"
+    },
+    {
+      "command": [
+        "g++",
+        "-std=gnu++20",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Wshadow",
+        "tests/round02/test_game_string.cpp",
+        "-o",
+        "C:\\Users\\TSOU\\Desktop\\cf\\build\\fresh-clone-round02-20261025\\template\\build\\fresh_smoke\\test_game_string.exe"
+      ],
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\TSOU\\Desktop\\cf\\build\\fresh-clone-round02-20261025\\template\\build\\fresh_smoke\\test_game_string.exe"
+      ],
+      "exit_code": 0,
+      "output": "game_string: MEX 120000 + Nim/SG + Trie + palindrome exhaustive PASS\n"
+    }
+  ],
+  "template_status": "",
+  "cf_status": "D 1/1124/output/A.exe\n D 2/1104/output/1.exe\n D 2/1115/output/4.exe\n D 3/1103/output/5.exe\n D 3/1109/output/5.exe\n D ICPC/2014_IC_xian/output/1.exe\n D luogu/output/4.exe",
+  "status": "PASS_FOR_TEMPLATE_WITH_RECORDED_HOST_LIMITATION",
+  "host_limitation": {
+    "type": "Windows Defender quarantined historical executables in fresh clone",
+    "evidence": [
+      {
+        "InitialDetectionTime": "2026-10-25T01:24:04.208+08:00",
+        "LastThreatStatusChangeTime": "2026-10-25T01:25:02.102+08:00",
+        "ActionSuccess": true,
+        "Resources": [
+          "file:_C:\\Users\\TSOU\\Desktop\\cf\\build\\fresh-clone-round02-20261025\\1\\1124\\output\\A.exe",
+          "file:_C:\\Users\\TSOU\\Desktop\\cf\\build\\fresh-clone-round02-20261025\\2\\1104\\output\\1.exe",
+          "file:_C:\\Users\\TSOU\\Desktop\\cf\\build\\fresh-clone-round02-20261025\\2\\1115\\output\\4.exe",
+          "file:_C:\\Users\\TSOU\\Desktop\\cf\\build\\fresh-clone-round02-20261025\\3\\1103\\output\\5.exe",
+          "file:_C:\\Users\\TSOU\\Desktop\\cf\\build\\fresh-clone-round02-20261025\\3\\1109\\output\\5.exe",
+          "file:_C:\\Users\\TSOU\\Desktop\\cf\\build\\fresh-clone-round02-20261025\\ICPC\\2014_IC_xian\\output\\1.exe",
+          "file:_C:\\Users\\TSOU\\Desktop\\cf\\build\\fresh-clone-round02-20261025\\luogu\\output\\4.exe"
+        ]
+      },
+      {
+        "InitialDetectionTime": "2026-10-25T01:23:55.52+08:00",
+        "LastThreatStatusChangeTime": "2026-10-25T01:24:35.821+08:00",
+        "ActionSuccess": true,
+        "Resources": [
+          "file:_C:\\Users\\TSOU\\Desktop\\cf\\build\\fresh-clone-round02-20261025\\1\\1124\\output\\A.exe",
+          "file:_C:\\Users\\TSOU\\Desktop\\cf\\build\\fresh-clone-round02-20261025\\2\\1104\\output\\1.exe",
+          "file:_C:\\Users\\TSOU\\Desktop\\cf\\build\\fresh-clone-round02-20261025\\2\\1115\\output\\4.exe"
+        ]
+      }
+    ],
+    "template_worktree_clean": true,
+    "cf_worktree_clean": false,
+    "git_entries_unchanged": true,
+    "historical_executables_executed": false,
+    "security_controls_changed": false
+  }
+}
