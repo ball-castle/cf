@@ -22,4 +22,16 @@ python3 scripts/check_round02_print.py
 
 先合并template PR，再合并cf PR；若squash/rebase改变最终目标SHA，先更新gitlink并重新克隆核验。
 
-发布后的全新克隆和远端CI结果将在本记录下方补齐；当前不把进行中的检查写成通过。
+## 发布后全新克隆验证
+
+实际从 GitHub 全新递归克隆本分支的 `544485685fe5524a0847a97e91ac8d0f3909a03e`。子模块检出 `76ae1760c8106d23bab8face9b64c5802b687651`，mode160000和URL正确；template工作区干净。
+
+- 100个模块的源码、16组测试及全部本地include依赖，与两套归一化SHA证据逐项匹配。
+- 32个原正式模块、32份历史源码及第一轮4份成品，均与保留基线一致。
+- 新克隆内旧/新打印一致性门禁，以及故意破坏的导出/源码/索引回归测试通过。
+- 新克隆中重新编译运行runtime、STL、game/string三组功能测试，无编译诊断，全部通过。
+- cf历史215份cpp、151个exe的Git条目不变。Windows Defender日志确认隔离了新克隆内7个历史exe，因此不能将该主机的cf工作区称为干净；template不受影响。没有运行这些exe、恢复隔离文件或改变防护配置。
+
+精确命令、输出、哈希和主机限制见 [DELIVERY_ROUND02_VERIFICATION.json](DELIVERY_ROUND02_VERIFICATION.json)。本记录后续提交仅补发布证据，目标gitlink不变。
+
+GitHub Actions在 [本次运行](https://github.com/ball-castle/template/actions/runs/40115687058) 对统一代码入口执行release与sanitizers；最终作业状态写入上述JSON并同步两个PR。
