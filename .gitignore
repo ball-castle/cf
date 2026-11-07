@@ -1,0 +1,10 @@
+# Future build products; already tracked historical files are retained.
+*.exe
+*.o
+*.obj
+*.out
+*.pdb
+output/
+build/
+.cache/
+__pycache__/
